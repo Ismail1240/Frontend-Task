@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <section id="overlaySection" class="overlay">
+      <div>
+        <h2 id="closeOverlay">X</h2>
+      </div>
+
+      <form>
+        <h2>Task Title</h2>
+        <input type="text" placeholder="Enter task title" />
+
+        <h2>Task Description</h2>
+        <input
+          name="description"
+          id="description"
+          placeholder="Enter task description"
+        />
+
+        <h2>Task Category</h2>
+        <select name="category" id="category">
+          <option selected value="all-categories">All Categories</option>
+          <option value="study">Study</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+        </select>
+
+        <label for="status">Task Status</label>
+        <select id="status" name="status">
+          <option selected value="none">Task Status</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+
+        <button type="submit" id="addTaskBtn">Add Task</button>
+      </form>
+    </section>
+
+    <div class="nav-cont">
+      <nav>
+        <h1>Task Manager</h1>
+        <button id="changeThemeBtn" data-theme="dark" class="dark-theme">
+          <img id="themeImg" src="./resources/dark-mode.png" alt="" />
+        </button>
+      </nav>
+
+      <div class="otherFunctionalities">
+        <h2 id="pending">Pending : 0</h2>
+
+        <h2 id="completed">Completed : 0</h2>
+
+
+          <label id="filterLabel" for="filterBy"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+            >
+              <path
+                d="M14 14V20L10 22V14L4 5V3H20V5L14 14ZM6.4037 5L12 13.3944L17.5963 5H6.4037Z"
+              ></path></svg>
+
+        </label>
+          <select name="filterBy" id="filterBy" class="filterBy">
+            <option selected value="all-categories">All Categories</option>
+            <option value="study">Study</option>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+          </select>
+
+
+
+        <button id="clearAll">Clear All</button>
+      </div>
+    </div>
+
+    <main>
+      <div>
+        <input id="searchBar" type="search" placeholder="Search tasks..." />
+        <button id="createTaskBtn">Create Task</button>
+      </div>
+    </main>
+
+    <section class="taskSection">
+      <div class="taskCont">
+        <!-- <div class="card">
+            <div class="top">
+              <h1>Build Frontend of webpage</h1>
+              <h4>Status : Completed</h4>
+            </div>
+            <h2 >I have to build the frontend of website . I use the HTML , CSS and vanilla javaScript .</h2>
+            <div class="bottom">
+                <button>Edit</button>
+                <button>Delete</button>
+                <button>Mark As Completed</button>
+            </div>
+          </div> -->
+      </div>
+    </section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
